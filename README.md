@@ -52,3 +52,19 @@ def define_argparser():
 
     return config
 ```
+* Also you can make oof-file by make_oof.py
+```bash
+!python3 make_oof.py --name beomi_CLS_0.2_0 --model_fn model_save --pretrained_model_name  beomi/KcELECTRA-base-v2022 --batch_size 256 --max_length 512
+```
+* For submission, use prediction.py
+```bash
+!python3 prediction.py --name tunib_attn_0 --model_fn model_save --pretrained_model_name tunib/electra-ko-base --batch_size 256 --max_length 512
+```
+
+# KeyIdea for solution
+* There are many options available.
+* -> a result of the ensemble of options
+* https://wandb.ai/hurontrara/sentence_classification?workspace=user-hurontrara
+* -> I've organized the results of the experiment. 
+* The final ensemble was performed using sklearn's linear regression method.
+* You can check ensemble.ipynb
